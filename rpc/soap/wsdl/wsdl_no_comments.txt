@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost:8080/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Events" targetNamespace="http://localhost:8080/wsdl">
+  <types>
+    <xsd:schema targetNamespace="http://localhost:8080/wsdl">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="EventsPort">
+    <operation name="getEvents">
+      <input message="tns:getEventsIn"/>
+    </operation>
+    <operation name="getEventById">
+      <input message="tns:getEventByIdIn"/>
+    </operation>
+  </portType>
+  <binding name="EventsBinding" type="tns:EventsPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getEvents">
+      <soap:operation soapAction="http://localhost:8080/wsdl#getEvents"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/wsdl"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/wsdl"/>
+      </output>
+    </operation>
+    <operation name="getEventById">
+      <soap:operation soapAction="http://localhost:8080/wsdl#getEventById"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/wsdl"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/wsdl"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="EventsService">
+    <port name="EventsPort" binding="tns:EventsBinding">
+      <soap:address location="http://localhost:8080/wsdl"/>
+    </port>
+  </service>
+  <message name="getEventsIn"/>
+  <message name="getEventByIdIn">
+    <part name="event_id" type="xsd:anyType"/>
+  </message>
+</definitions>

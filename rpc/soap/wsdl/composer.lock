@@ -1,0 +1,112 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "19ee395c5c9ec67af8f8cdaec25f10f1",
+    "packages": [
+        {
+            "name": "php2wsdl/php2wsdl",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dragosprotung/php2wsdl.git",
+                "reference": "6a96283a88b23bde9a6bfa551510626d9424304a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dragosprotung/php2wsdl/zipball/6a96283a88b23bde9a6bfa551510626d9424304a",
+                "reference": "6a96283a88b23bde9a6bfa551510626d9424304a",
+                "shasum": ""
+            },
+            "require": {
+                "wingu/reflection": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHP2WSDL\\": "src/",
+                    "PHP2WSDL\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragos Protung",
+                    "email": "dragos@protung.ro",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create WSDL files form PHP classes.",
+            "keywords": [
+                "wsdl generator"
+            ],
+            "time": "2014-03-31 18:15:38"
+        },
+        {
+            "name": "wingu/reflection",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Speicher210/Reflection.git",
+                "reference": "7862a732cf68d8f462106921faa1d08c3ef35e33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Speicher210/Reflection/zipball/7862a732cf68d8f462106921faa1d08c3ef35e33",
+                "reference": "7862a732cf68d8f462106921faa1d08c3ef35e33",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Wingu\\OctopusCore\\Reflection\\": "src/",
+                    "Wingu\\OctopusCore\\Reflection\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragos Protung",
+                    "email": "dragos.protung@speicher210.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Antoine Verger",
+                    "email": "antoine.verger@speicher210.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Wingu OctopusCore Reflection",
+            "keywords": [
+                "reflection"
+            ],
+            "time": "2013-03-13 16:54:23"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "php2wsdl/php2wsdl": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
